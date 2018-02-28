@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo1</title>
+</head>
+<body>
+<div id="example"></div>
+</body>
+<script src="bower_components/react/react.js"></script>
+<script src="bower_components/react/react-dom.js"></script>
+<script src="bower_components/browser.min.js"></script>
+<!-- <script src="node_modules/_babel-core@6.25.0@babel-core/lib/api/browser.js"></script> -->
+<script type="text/babel">
+	var data = 123;
+
+	class MyTitle extends React.Component{
+		/*static propTypes = {
+			title: React.PropTypes.string.isRequired,
+		};*/
+		render(){
+			return <h1> {this.props.title} </h1>;
+		}
+	}
+
+	MyTitle.propTypes = {
+		title: React.PropTypes.string.isRequired,
+	}
+
+	ReactDOM.render(
+		<MyTitle title={data}></MyTitle>,
+		document.getElementById('example')
+	)
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo1</title>
+</head>
+<body>
+<div id="example"></div>
+</body>
+<script src="bower_components/react/react.js"></script>
+<script src="bower_components/react/react-dom.js"></script>
+<script src="bower_components/browser.min.js"></script>
+<script type="text/babel">
+	var names = ['Alice','Emily','Kate'];
+
+	ReactDOM.render(
+		<div>
+			{
+				names.map(function(name,index){
+					return <div key={index}>Hello,{name}!</div>
+				})
+			}
+			<div>{names}</div>
+		</div>,
+		document.getElementById('example')
+	)
+</script>
+</html>
